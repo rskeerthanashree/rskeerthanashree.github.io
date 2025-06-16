@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Place Your Order</title>
+  <style>
+    body {
+      background-color:black;
+      font-family: Arial;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color:antiquewhite;
+      border-radius: 10px;
+      
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid ;
+      font-size: 16px;
+    }
+
+    .terms {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .submit-btn {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color:black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Place Your Order</h2>
+
+    <form action="submitorder.html" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="pan">PAN Card Number:</label>
+      <input type="text" id="pan" name="pan" required>
+
+      <label for="aadhaar">Aadhaar Number:</label>
+      <input type="text" id="aadhaar" name="aadhaar" required>
+
+      <label for="brand">Select Brand:</label>
+      <select id="brand" name="brand" required>
+        <option value="">Choose a Brand</option>
+        <option value="Gucci">Gucci</option>
+        <option value="Chanel">Chanel</option>
+        <option value="Versace">Versace</option>
+        <option value="Louis Vuitton">Louis Vuitton</option>
+        <option value="Rolex">Rolex</option>
+        <option value="Apple">Apple</option>
+      </select>
+
+      <label for="product">Product You Want to Rent:</label>
+      <input type="text" id="product" name="product" placeholder="e.g., Gucci Diana Bag, Rolex Submariner, iPhone 14 Pro" required>
+
+      <label for="days">Rental Duration (in days):</label>
+      <input type="number" id="days" name="days" min="1" required>
+
+      <div class="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree: In case of damage, I’ll bear charges. If not returned on time, my bank account may be held for the full product price.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Order</button>
+    </form>
+  </div>
+
+</body>
+</html>
